@@ -74,7 +74,8 @@ class RainbowAgent(dqn_agent.DQNAgent):
                optimizer=tf.train.AdamOptimizer(
                    learning_rate=0.00025, epsilon=0.0003125),
                summary_writer=None,
-               summary_writing_frequency=500):
+               summary_writing_frequency=500,
+               allow_partial_reload=False):
     """Initializes the agent and constructs the components of its graph.
 
     Args:
@@ -131,7 +132,8 @@ class RainbowAgent(dqn_agent.DQNAgent):
         use_staging=use_staging,
         optimizer=self.optimizer,
         summary_writer=summary_writer,
-        summary_writing_frequency=summary_writing_frequency)
+        summary_writing_frequency=summary_writing_frequency,
+        allow_partial_reload=allow_partial_reload)
 
   def _get_network_type(self):
     """Returns the type of the outputs of a value distribution network.
