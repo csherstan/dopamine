@@ -5,3 +5,5 @@
 .pytest_cache
 __pycache__
 .cache
+.idea
+dopamine_rl.egg-info
